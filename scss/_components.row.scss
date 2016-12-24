@@ -5,15 +5,59 @@
 */
 
 .c-row {
+    position: relative;
     @include padding-tb($alpha-leading,0);
     @include padding-lr($columns-gutter,$columns-gutter);
+
+    @include mq(bp3) {
+        @include padding-lr($columns-gutter*4,$columns-gutter*4);
+    }
+
+    //margin-left: 15rem;
 }
 
-.c-row--alpha {
-    background-color: palette(color-neutral,x-light);
+.c-row--header {
+    @include padding-lr($columns-gutter,$columns-gutter);
+
+    //@include mq(bp3) {
+    //    @include padding-tb($alpha-leading * 2, $alpha-leading);
+    //}
+
+    .o-container {
+        max-width: none;
+    }
 }
 
-.c-row--beta {
-    color: palette(color-neutral,light);
-    background-color: palette(color-neutral,dark);
+//.c-row--alpha {
+//    background-color: palette(color-neutral,xxx-light);
+//}
+//
+//.c-row--beta {
+//    background-color: palette(color-alpha,dark);
+//    color: palette(color-neutral,xxx-light);
+//}
+//
+//.c-row--gamma {
+//    background-color: palette(color-neutral,xx-dark);
+//    color: palette(color-neutral,xxx-light);
+//}
+
+.c-row--lg {
+    @include mq(bp3) {
+        @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
+    }
+}
+
+.c-row--xl {
+    @include mq(bp3) {
+        @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
+    }
+
+    @include mq(bp6) {
+        @include padding-tb($alpha-leading * 6,$alpha-leading * 5);
+    }
+}
+
+.c-row--full {
+
 }

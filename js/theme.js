@@ -8,6 +8,18 @@ var chopstick =
         chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
     },
 
+    function(){
+        $(window).on('scroll', function() {
+            var scrollTop = $(this).scrollTop();
+            $('.js-section').each(function() {
+                var topDistance = $(this).offset().top;
+                if ( (topDistance) < scrollTop ) {
+                    $('js-nav ul li a').css('color',$(this).attr('data-color'));
+                }
+            });
+        });
+    },
+
     /**
      * This function will load an object by a given name
      *

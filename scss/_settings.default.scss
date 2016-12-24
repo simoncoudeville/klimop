@@ -42,35 +42,47 @@
 }
 
 // Base colors
-$color-neutral                      : #aaa !default;
 
-$color-alpha                        : #0074D9 !default;
-$color-beta                         : #2ECC40 !default;
+$color-alpha                        : #acdcd4 !default;
+$color-beta                         : #F6AA3D !default;
+$color-gamma                        : #CE4841 !default;
 
 $color-error                        : #FF4136 !default;
 $color-success                      : #2ECC40 !default;
 $color-notice                       : #FF851B !default;
 
+$color-neutral                      : hsl(hue($color-alpha),5,50) !default;
+
 // Palettes
 $palettes: (
     color-neutral: (
-        x-light                     : hsl(hue($color-neutral),0,100),
-        light                       : hsl(hue($color-neutral),0,90),
+        xxx-light                   : hsl(hue($color-neutral),saturation($color-neutral),100),
+        xx-light                    : hsl(hue($color-neutral),saturation($color-neutral),95),
+        x-light                     : hsl(hue($color-neutral),saturation($color-neutral),80),
+        light                       : hsl(hue($color-neutral),saturation($color-neutral),65),
         base                        : $color-neutral,
-        dark                        : hsl(hue($color-neutral),0,30),
-        x-dark                      : hsl(hue($color-neutral),0,10)
+        dark                        : hsl(hue($color-neutral),saturation($color-neutral),35),
+        x-dark                      : hsl(hue($color-neutral),saturation($color-neutral),20),
+        xx-dark                     : hsl(hue($color-neutral),saturation($color-neutral),10),
+        xxx-dark                    : hsl(hue($color-neutral),saturation($color-neutral),5)
     ),
     color-alpha: (
-        light                       : hsl(hue($color-alpha),70,60),
+        light                       : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha)+20),
         base                        : $color-alpha,
-        dark                        : hsl(hue($color-alpha),100,25),
-        x-dark                      : hsl(hue($color-alpha),100,15)
+        dark                        : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha)-20),
+        x-dark                      : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha)-40)
     ),
     color-beta: (
-        light                       : hsl(hue($color-beta),70,60),
+        light                       : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta)+20),
         base                        : $color-beta,
-        dark                        : hsl(hue($color-beta),100,25),
-        x-dark                      : hsl(hue($color-beta),100,15)
+        dark                        : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta)-20),
+        x-dark                      : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta)-40)
+    ),
+    color-gamma: (
+        light                       : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)+20),
+        base                        : $color-gamma,
+        dark                        : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)-20),
+        x-dark                      : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)-40)
     ),
     color-error: (
         light                       : hsl(hue($color-error),70,60),
@@ -119,17 +131,20 @@ $ms13                               : 100 !default;
 // Font settings
 // ---
 
-$alpha-font-family                  : sans-serif !default;
-$beta-font-family                   : serif !default;
+$alpha-font-family                  : 'franklin-gothic-urw', sans-serif !default;
+$beta-font-family                   : 'clarendon-urw', serif !default;
 
 $alpha-font-size                    : $ms0 !default;
 
-$alpha-font-weight                  : 400 !default;
-$beta-font-weight                   : 700 !default;
+$alpha-font-weight                  : 300 !default;
+$beta-font-weight                   : 400 !default;
+$gamma-font-weight                  : 500 !default;
+$delta-font-weight                  : 700 !default;
+$jota-font-weight                   : 800 !default;
 
 $alpha-line-height                  : 1.5 !default;
 
-$alpha-leading                      : 1 !default;
+$alpha-leading                      : $alpha-line-height !default;
 $beta-leading                       : 2 !default;
 
 // ---
@@ -170,7 +185,7 @@ $breakpoints: (
 // ---
 
 // 1 times the $alpha-font-size. It's calculated in rem in _tools.spacing.scss
-$columns-gutter                     : 1 !default;
+$columns-gutter                     : 1.5 !default;
 
 // Define the amount of columns in the grid
 $columns: (
@@ -178,7 +193,8 @@ $columns: (
     3,
     4,
     5,
-    6
+    6,
+    8
 ) !default;
 
 // ---
@@ -187,10 +203,10 @@ $columns: (
 
 $increments: (
     alpha                           : 0,
-    beta                            : .5,
-    gamma                           : 1,
-    delta                           : 1.5,
-    epsilon                         : 2
+    beta                            : $alpha-leading / 2,
+    gamma                           : $alpha-leading,
+    delta                           : $alpha-leading * 1.5,
+    epsilon                         : $alpha-leading * 2
 ) !default;
 
 // ---
@@ -208,43 +224,37 @@ $animation-easing-beta              : cubic-bezier(.68, -.55, .265, 1.55) !defau
 // ---
 
 $html-font-family                   : $alpha-font-family !default;
-$html-font-weight                   : $alpha-font-weight !default;
+$html-font-weight                   : $beta-font-weight !default;
 $html-font-size                     : $alpha-font-size !default;
 $html-line-height                   : $alpha-line-height !default;
 
-$html-responsive-font-size          : false !default;
+$html-responsive-font-size          : true !default;
 $html-responsive-font-breakpoint    : bp5 !default;
 $html-responsive-font-magnification : 112.5% !default;
 
-$html-background-color              : palette(color-neutral,dark) !default;
-$body-color                         : palette(color-neutral,dark) !default;
+$html-background-color              : palette(color-neutral,xxx-light) !default;
+$body-color                         : palette(color-neutral,x-dark) !default;
 
 $body-font-smoothing                : true !default;
 
-$body-selection-background-color    : palette(color-neutral,dark) !default;
-$body-selection-color               : palette(color-neutral,light) !default;
+$body-selection-background-color    : palette(color-alpha,dark) !default;
+$body-selection-color               : palette(color-neutral,xxx-light) !default;
 $body-selection-text-shadow         : none !default;
 
 // ---
 // Typography
 // ---
 
-$h1-font-family                     : $alpha-font-family !default;
-$h1-font-weight                     : $alpha-font-weight !default;
-$h1-font-size                       : $ms6 !default;
-$h1-line-height                     : 2 !default;
+$h1-font-family                     : $beta-font-family !default;
+$h1-font-weight                     : $gamma-font-weight !default;
 $h1-margin-bottom                   : $alpha-leading !default;
 
-$h2-font-family                     : $alpha-font-family !default;
-$h2-font-weight                     : $alpha-font-weight !default;
-$h2-font-size                       : $ms4 !default;
-$h2-line-height                     : 1.5 !default;
+$h2-font-family                     : $beta-font-family !default;
+$h2-font-weight                     : $gamma-font-weight !default;
 $h2-margin-bottom                   : $alpha-leading !default;
 
 $h3-font-family                     : $alpha-font-family !default;
-$h3-font-weight                     : $alpha-font-weight !default;
-$h3-font-size                       : $ms3 !default;
-$h3-line-height                     : 1.25 !default;
+$h3-font-weight                     : $gamma-font-weight !default;
 $h3-margin-bottom                   : $alpha-leading !default;
 
 $h4-font-family                     : $alpha-font-family !default;
@@ -267,7 +277,7 @@ $h6-margin-bottom                   : $alpha-leading !default;
 
 $base-font-size                     : $alpha-font-size !default;
 $base-line-height                   : 1 !default;
-$base-margin-bottom                 : $beta-leading !default;
+$base-margin-bottom                 : $alpha-leading !default;
 $base-indent                        : 2 !default;
 
 $blockquote-font-style              : italic !default;
@@ -291,8 +301,8 @@ $link-transition                    : none !default;
 $link-decoration                    : none !default;
 $link-decoration--hover             : underline !default;
 
-$link-color                         : palette(color-alpha) !default;
-$link-color--visited                : palette(color-alpha) !default;
+$link-color                         : palette(color-alpha,dark) !default;
+$link-color--visited                : palette(color-alpha,dark) !default;
 $link-color--hover                  : palette(color-alpha,light) !default;
 $link-color--focus                  : palette(color-alpha,light) !default;
 
@@ -344,7 +354,7 @@ $caption-padding-bottom             : $alpha-leading !default;
 // Grid
 // ---
 
-$grid-max-width                     : map-get($breakpoints,bp5) !default;
+$grid-max-width                     : map-get($breakpoints,bp4) !default;
 $grid-gutter                        : $columns-gutter !default;
 
 // ---

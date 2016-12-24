@@ -13,7 +13,6 @@
     @include mq(bp3) {
         display: block;
         width: auto;
-        float: right;
     }
 
     &.is-visible {
@@ -26,7 +25,8 @@
 
         @include mq(bp3) {
             border-top: 0;
-            margin-bottom: 0;
+            display: flex;
+            //margin-bottom: 0;
         }
     }
 
@@ -36,29 +36,48 @@
         }
 
         @include mq(bp3) {
-            float: left;
+            //float: left;
 
             & + & {
                 border-top: 0;
-                @include margin-lr(2,0);
+                @include margin-lr($columns-gutter,0);
             }
         }
     }
 
     .c-nav-main__link {
         display: block;
-        color: palette(color-alpha);
         text-decoration: none;
-        font-weight: $beta-font-weight;
-        @include text-dimensions($alpha-font-size,1,0,.25,.25);
+        font-weight: $gamma-font-weight;
+        @include text-dimensions($ms-1,1,0,.25,.25);
 
         @include mq(bp3) {
-            @include padding-tb(1.25,1.25);
+            @include padding-tb(.5,.5);
+        }
+
+        &,
+        &:visited {
+            //color: palette(color-beta);
+            color: palette(color-neutral,x-dark);
+            //color: palette(color-neutral,xxx-light);
         }
 
         &:hover,
         .is-selected & {
             color: palette(color-alpha,dark);
+        }
+    }
+
+    .c-nav-main__link--cta {
+        //background-color: palette(color-alpha,dark);
+        background-color: palette(color-gamma);
+        border-radius: 3rem;
+        //font-weight: $delta-font-weight;
+        @include padding-lr($columns-gutter);
+
+        &,
+        &:visited {
+            color: #fff;
         }
     }
 

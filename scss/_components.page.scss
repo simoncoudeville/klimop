@@ -1,0 +1,27 @@
+/*
+    Components: Page
+    ---
+    Big page chunks
+*/
+
+.c-page {
+    //display: flex;
+}
+
+.c-page-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    //bottom: 0;
+    left: 0;
+    background-color: rgba(white,.975);
+    box-shadow: 0 0 50px rgba(palette(color-neutral,xxx-dark),.125);
+    z-index: 2;
+}
+
+.c-page-main {
+    z-index: 1;
+    position: relative;
+    //flex-basis: 80%;
+    @include padding-top(5.5);
+}

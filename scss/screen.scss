@@ -29,6 +29,7 @@
 @import '../vendor/chopstick-sass/scss/tools.mixins';
 @import '../vendor/chopstick-sass/scss/tools.spacing';
 @import '../vendor/chopstick-sass/scss/tools.typography';
+@import 'tools.ms';
 
 /* Generic */
 @import '../vendor/chopstick-sass/scss/generic.normalize';
@@ -37,7 +38,8 @@
 
 /* Elements */
 @import '../vendor/chopstick-sass/scss/elements.page';
-@import '../vendor/chopstick-sass/scss/elements.typography';
+//@import '../vendor/chopstick-sass/scss/elements.typography';
+@import 'elements.typography';
 @import '../vendor/chopstick-sass/scss/elements.images';
 @import '../vendor/chopstick-sass/scss/elements.forms';
 @import '../vendor/chopstick-sass/scss/elements.tables';
@@ -51,9 +53,12 @@
 @import '../vendor/chopstick-sass/scss/objects.tables';
 
 /* Components */
+@import 'components.page';
+@import 'components.header';
 @import 'components.navigation';
 @import 'components.brand';
 @import 'components.row';
+@import 'components.background-image';
 @import 'components.icons';
 @import 'components.symbols';
 @import 'components.alerts';
@@ -80,6 +85,8 @@
 @import '../vendor/chopstick-sass/scss/utilities.states';
 @import '../vendor/chopstick-sass/scss/utilities.print';
 @import '../vendor/chopstick-sass/scss/utilities.debug';
+@import 'utilities.max-width';
+@import 'utilities.ms';
 
 /* Nasty, hacky, quick-fix CSS: http://csswizardry.com/2013/04/shame-css/ */
 @import 'shame';

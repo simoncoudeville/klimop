@@ -4,24 +4,38 @@
     Brand image/logo
 */
 
-/**
- *  1. Needs to be the width of the logo you are using.
- *  2. Logo is set as background-image.
- *     Text-indent is set to prevent text from showing on top of the background-image.
- */
+$logo-ratio:    3.35;
+$logo-height:   $alpha-leading * 1.25rem;
+$logo-width:    $logo-height * $logo-ratio;
 
 .c-logo {
-    float: left;
-    display: block;
-    width: 157px; /* [1] */
-    margin-bottom: 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url('../img/svg/logo.svg');
-    text-indent: -99999px; /* [2] */
-    @include text-dimensions($alpha-font-size,1,0,1.25,1.25);
+    width: $logo-width;
+    height: $logo-height;
+    //display: block;
+    //display: inline-flex;
+    //align-items: center;
 }
+
+    .c-logo__svg {
+        display: block;
+    }
 
     .c-logo__link {
         display: block;
+    }
+
+    .c-logo__path {
+        fill: palette(color-neutral,x-dark);
+
+        .c-logo--neg & {
+            fill: palette(color-neutral,xxx-light);
+        }
+    }
+
+    .c-logo__dot {
+        fill: palette(color-alpha);
+
+        //.c-logo--neg & {
+        //    fill: palette(color-neutral,xxx-light);
+        //}
     }

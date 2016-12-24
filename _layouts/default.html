@@ -3,25 +3,20 @@
 
 {% include generic.head.html %}
 
-<body{% if page.section %} class="c-{{ page.section }}"{% endif%}>
+<body class="c-page">
 
-    <!-- Deprecated browser alert -->
     {% include components.browser-alert.html %}
-    <!-- End deprecated browser alert -->
 
-    <!-- Page header -->
-    {% include components.header.html %}
-    <!-- End page header -->
+    <div class="c-page-header">
+        {% include components.header.html %}
+    </div>
 
-    {{ content }}
+    <div class="c-page-main">
+        {{ content }}
+        {% include components.footer.html %}
+    </div>
 
-    <!-- Page footer -->
-    {% include components.footer.html %}
-    <!-- End page footer -->
-
-    <!-- Footer javascript -->
     {% include generic.javascript.html %}
-    <!-- End footer javascript -->
 
 </body>
 </html>
