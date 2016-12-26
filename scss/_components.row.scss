@@ -23,9 +23,9 @@
     //    @include padding-tb($alpha-leading * 2, $alpha-leading);
     //}
 
-    .o-container {
-        max-width: none;
-    }
+    //.o-container {
+    //    max-width: none;
+    //}
 }
 
 //.c-row--alpha {
@@ -58,6 +58,9 @@
     }
 }
 
-.c-row--full {
 
+
+.c-row--timeline {
+    //padding-top: 0;
+    background-color: palette(color-alpha,dark);
 }

@@ -81,6 +81,10 @@
     }
 }
 
+.c-button--round {
+    border-radius: 10rem;
+}
+
 // Button sizes
 
 .c-button--sm {
@@ -89,8 +93,8 @@
 }
 
 .c-button--md {
-    @include padding-lr(1,1);
-    @include input-dimensions($ms-1,1,0,.75,.75);
+    @include padding-lr($columns-gutter,$columns-gutter);
+    @include input-dimensions($ms-1,1,0,.7,.8);
 }
 
 .c-button--lg {
@@ -139,6 +143,27 @@
     &:active {
         background-color: palette(color-beta);
     }
+}
+
+.c-button--gamma {
+    background-color: palette(color-gamma);
+    border-color: palette(color-gamma);
+
+    &,
+    &:visited {
+        color: palette(color-neutral,xxx-light);
+    }
+
+    &:hover,
+    &:focus {
+        background-color: palette(color-gamma,light);
+        border-color: palette(color-gamma,light);
+    }
+
+    &:active {
+        background-color: palette(color-gamma);
+    }
+
 }
 
 // Modifiers

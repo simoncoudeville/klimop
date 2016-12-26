@@ -22,7 +22,7 @@
 }
 
 @mixin ms1 {
-    @include text-dimensions($ms1,1.125);
+    @include text-dimensions($ms1,1);
 }
 
 @mixin ms2 {

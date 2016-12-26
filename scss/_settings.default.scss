@@ -45,7 +45,7 @@
 
 $color-alpha                        : #acdcd4 !default;
 $color-beta                         : #F6AA3D !default;
-$color-gamma                        : #CE4841 !default;
+$color-gamma                        : #8464be !default; // 8464be CE4841
 
 $color-error                        : #FF4136 !default;
 $color-success                      : #2ECC40 !default;
@@ -79,7 +79,7 @@ $palettes: (
         x-dark                      : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta)-40)
     ),
     color-gamma: (
-        light                       : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)+20),
+        light                       : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)+10),
         base                        : $color-gamma,
         dark                        : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)-20),
         x-dark                      : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)-40)

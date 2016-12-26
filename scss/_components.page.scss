@@ -23,5 +23,18 @@
     z-index: 1;
     position: relative;
     //flex-basis: 80%;
-    @include padding-top(5.5);
+    //@include padding-top(5.5);
+}
+
+.c-page-top-cta {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 50;
+    @include padding-tb($alpha-leading,0);
+    @include padding-lr($columns-gutter,$columns-gutter);
+
+    .c-button {
+        box-shadow: 0 5px 15px rgba(palette(color-neutral,xxx-dark),.25);
+    }
 }
