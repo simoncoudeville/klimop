@@ -6,6 +6,7 @@ var chopstick =
         chopstick.loadObject(chopstick.mobileNav, 'chopstick.mobileNav');
         chopstick.loadObject(chopstick.hide, 'chopstick.hide');
         chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
+        chopstick.loadObject(chopstick.blazy, 'chopstick.blazy');
     },
 
     function(){
@@ -46,6 +47,29 @@ var chopstick =
                 obj.init();
             }
         }
+    }
+};
+
+chopstick.blazy =
+{
+
+    init: function()
+    {
+
+        var bLazy = new Blazy({
+            selector: ".js-blazy",
+            successClass: "is-loaded",
+            breakpoints: [{
+                width: 320, // max-width
+                src: 'data-src-small'
+            },
+            {
+                width: 768, // max-width
+                src: 'data-src-medium'
+            }]
+
+        });
+
     }
 };
 

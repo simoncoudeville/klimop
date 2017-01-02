@@ -11,6 +11,7 @@ $logo-width:    $logo-height * $logo-ratio;
 .c-logo {
     width: $logo-width;
     height: $logo-height;
+    margin-bottom: 0;
     //display: block;
     //display: inline-flex;
     //align-items: center;

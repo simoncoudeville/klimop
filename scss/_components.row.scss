@@ -58,9 +58,26 @@
     }
 }
 
+.c-row--xxl {
+    @include mq(bp3) {
+        @include padding-tb($alpha-leading * 6,$alpha-leading * 5);
+    }
 
+    @include mq(bp6) {
+        @include padding-tb($alpha-leading * 10,$alpha-leading * 9);
+    }
+}
+
+.c-row--empty {
+    padding: 0;
+}
+
+.c-row--clear-tb {
+    padding-top: 0;
+    padding-bottom: 0;
+}
 
 .c-row--timeline {
     //padding-top: 0;
-    background-color: palette(color-alpha,dark);
+    //background-color: palette(color-alpha,dark);
 }

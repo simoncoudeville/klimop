@@ -12,5 +12,12 @@
     left: 0;
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: .5;
+    opacity: 0;
+    transition: all $animation-duration-alpha $animation-easing-alpha;
+}
+
+.c-background-image--opacity-alpha {
+    &.is-loaded {
+        opacity: .5;
+    }
 }
