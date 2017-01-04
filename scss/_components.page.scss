@@ -9,14 +9,17 @@
 }
 
 .c-page-header {
-    //position: absolute;
-    //top: 0;
-    //right: 0;
+    position: absolute;
+    //position: fixed;
+    top: $alpha-leading * 1rem;
+    right: 0;
     ////bottom: 0;
-    //left: 0;
+    left: 0;
     //background-color: rgba(white,.975);
-    //box-shadow: 0 0 50px rgba(palette(color-neutral,xxx-dark),.125);
+    //border-radius: 0 $radius $radius 0;
+    //box-shadow: 0 10px 30px rgba(palette(color-neutral,xxx-dark),.125);
     z-index: 2;
+    //@include padding-left($columns-gutter);
 
     //@include mq(bp3) {
     //    position: absolute;
@@ -42,7 +45,7 @@
     @include padding-tb($alpha-leading,0);
     @include padding-lr($columns-gutter,$columns-gutter);
 
-    //.c-button {
-    //    box-shadow: 0 5px 15px rgba(palette(color-neutral,xxx-dark),.25);
-    //}
+    .c-button {
+        box-shadow: 0 5px 15px rgba(palette(color-neutral,xxx-dark),.25);
+    }
 }

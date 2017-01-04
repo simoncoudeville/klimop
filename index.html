@@ -8,7 +8,7 @@ section: home
     <!-- <div class="c-background-image c-background-image--opacity-alpha js-blazy" data-src="img/photos/2_17.jpg"></div> -->
     <div class="o-container">
         <div class="c-intro__content">
-            <h1 class="c-intro__title u-ms8-bp3">Klimop biedt kinderen iets moois aan op een minder gebruikelijke manier.</h1>
+            <h1 class="c-intro__title u-ms7-bp3">In Klimop staat de wereld van het kind centraal zodat leren voor hen boeiend blijft.</h1>
         </div>
     </div>
     <!-- <p class="c-intro__more">
@@ -17,14 +17,14 @@ section: home
 </section>
 <section class="c-row c-row--clear-tb">
     <figure class="c-pictures c-pictures--first">
-        <div class="c-picture js-blazy" data-src="img/photos/DSC_1853.jpg">
-            <div class="c-picture__ratio c-picture__ratio--portrait"></div>
+        <div class="c-picture">
+            <img class="c-picture__image js-blazy" src="img/photos/small/DSC_1853.jpg" data-src-small="img/photos/small/DSC_1853.jpg" data-src-medium="img/photos/medium/DSC_1853.jpg" data-src="img/photos/large/DSC_1853.jpg" alt="">
         </div>
-        <div class="c-picture js-blazy" data-src="img/photos/82.jpg">
-            <div class="c-picture__ratio c-picture__ratio--portrait"></div>
+        <div class="c-picture">
+            <img class="c-picture__image js-blazy" src="img/photos/small/82.jpg" data-src-small="img/photos/small/82.jpg" data-src-medium="img/photos/medium/82.jpg" data-src="img/photos/large/82.jpg" alt="">
         </div>
-        <div class="c-picture js-blazy" data-src="img/photos/84.jpg">
-            <div class="c-picture__ratio c-picture__ratio--landscape"></div>
+        <div class="c-picture">
+            <img class="c-picture__image js-blazy" src="img/photos/small/84.jpg" data-src-small="img/photos/small/84.jpg" data-src-medium="img/photos/medium/84.jpg" data-src="img/photos/large/84.jpg" alt="">
         </div>
     </figure>
 </section>
@@ -33,7 +33,7 @@ section: home
         <div class="c-timeline-holder">
             <div class="c-timeline__intro u-max-width-md">
                 <h1 class="u-mb-epsilon u-color-beta-base">
-                    Een dag van een kind in Klimop is lorem ipsum dolor sit amet.
+                    Elke dag van een kind in Klimop is een nieuw verhaal.
                 </h1>
             </div>
             <div class="c-timeline">
@@ -184,14 +184,14 @@ section: home
 </section>
 <section class="c-row c-row--clear-tb">
     <figure class="c-pictures c-pictures--second">
-        <div class="c-picture js-blazy" data-src="img/photos/DSC_0258.jpg">
-            <div class="c-picture__ratio c-picture__ratio--landscape"></div>
+        <div class="c-picture">
+            <img class="c-picture__image js-blazy" src="img/photos/small/DSC_0258.jpg" data-src-small="img/photos/small/DSC_0258.jpg" data-src-medium="img/photos/medium/DSC_0258.jpg" data-src="img/photos/large/DSC_0258.jpg" alt="">
         </div>
-        <div class="c-picture js-blazy" data-src="img/photos/15.jpg">
-            <div class="c-picture__ratio c-picture__ratio--portrait"></div>
+        <div class="c-picture">
+            <img class="c-picture__image js-blazy" src="img/photos/small/15.jpg" data-src-small="img/photos/small/15.jpg" data-src-medium="img/photos/medium/15.jpg" data-src="img/photos/large/15.jpg" alt="">
         </div>
-        <div class="c-picture js-blazy" data-src="img/photos/DSC_0622.jpg">
-            <div class="c-picture__ratio c-picture__ratio--landscape"></div>
+        <div class="c-picture">
+            <img class="c-picture__image js-blazy" src="img/photos/small/DSC_0622.jpg" data-src-small="img/photos/small/DSC_0622.jpg" data-src-medium="img/photos/medium/DSC_0622.jpg" data-src="img/photos/large/DSC_0622.jpg" alt="">
         </div>
     </figure>
 </section>
@@ -202,7 +202,7 @@ section: home
         </div>
         <div class="o-grid o-grid--gutter">
             <div class="o-grid__item u-1-of-2-bp4">
-                <div class="u-max-width-sm">
+                <div class="u-max-width-sm s-content">
                     <p>
                         Dit start door de ouders een welkom gevoel te geven. Ouders stoppen hier niet aan de schoolpoort maar zijn elke dag welkom in de klassen. Voor en na de lessen kan je altijd terecht in de klassen. Op die manier ontstaan er informele gesprekken tussen ouders, leerkracht en andere ouders. Op die manier weten ouders wat er gebeurt in de klassen en verhogen we de betrokkenheid en het groepsgevoel bij de ouders.
                     </p>
@@ -215,7 +215,7 @@ section: home
                 </div>
             </div>
             <div class="o-grid__item u-1-of-2-bp4">
-                <div class="u-max-width-sm">
+                <div class="u-max-width-sm s-content">
                     <h3>Op schoolniveau</h3>
                     <p>
                         Schooloverleg ,het uitvoeren van praktische klussen, thema-avonden, meehelpen met schoolfeest en andere activiteiten, meedenken/werken in een werkgroep, vrijwillige ouderbijdrage, deelnemen aan co-team,…
@@ -242,24 +242,31 @@ section: home
 {% endcomment %}
 <section class="c-row c-row--clear-tb">
     <figure class="c-pictures c-pictures--first">
-        <div class="c-picture js-blazy" data-src="img/photos/DSC_1853.jpg">
+        {% comment %}
+        <div class="c-picture js-blazy" data-src="img/photos/large/DSC_1853.jpg">
             <div class="c-picture__ratio c-picture__ratio--portrait"></div>
         </div>
-        <div class="c-picture js-blazy" data-src="img/photos/82.jpg">
+        <div class="c-picture js-blazy" data-src="img/photos/large/82.jpg">
             <div class="c-picture__ratio c-picture__ratio--portrait"></div>
         </div>
-        <div class="c-picture js-blazy" data-src="img/photos/84.jpg">
+        <div class="c-picture js-blazy" data-src="img/photos/large/84.jpg">
             <div class="c-picture__ratio c-picture__ratio--landscape"></div>
         </div>
+        {% endcomment %}
     </figure>
 </section>
 <section class="c-row c-row--xxl">
     <div class="o-container">
-        <div class="u-max-width-md">
-            <h1 class="u-ms8-bp3 u-mb-beta u-color-alpha-dark">Hoe werkt dat, Freinet? </h1>
-            <p>
-                We beschrijven de waarden van freinet door de ogen van een klas
-            </p>
+        <div class="c-main-section-lg">
+            <div class="u-max-width-md">
+                <h1 class="u-ms8-bp3 u-mb-beta u-color-alpha-dark">Hoe werkt dat, Freinet? </h1>
+                <p>
+                    We beschrijven de waarden van freinet door de ogen van een klas
+                </p>
+            </div>
+        </div>
+        <div class="c-main-section-lg">
+
         </div>
     </div>
 </section>
