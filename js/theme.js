@@ -7,6 +7,7 @@ var chopstick =
         chopstick.loadObject(chopstick.hide, 'chopstick.hide');
         chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
         chopstick.loadObject(chopstick.blazy, 'chopstick.blazy');
+        // chopstick.loadObject(chopstick.parallax, 'chopstick.parallax');
     },
 
     function(){

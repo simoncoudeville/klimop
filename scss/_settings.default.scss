@@ -45,7 +45,7 @@
 
 $color-alpha                        : #acdcd4 !default;
 $color-beta                         : #F6AA3D !default;
-$color-gamma                        : #8464be !default; // 8464be CE4841
+$color-gamma                        : #6573bf !default; // 8464be CE4841 6573bf
 
 $color-error                        : #FF4136 !default;
 $color-success                      : #2ECC40 !default;
@@ -67,19 +67,21 @@ $palettes: (
         xxx-dark                    : hsl(hue($color-neutral),saturation($color-neutral),5)
     ),
     color-alpha: (
-        light                       : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha)+20),
+        x-light                     : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha)+30),
+        light                       : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha)+5),
         base                        : $color-alpha,
         dark                        : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha)-20),
         x-dark                      : hsl(hue($color-alpha),saturation($color-alpha),lightness($color-alpha)-30)
     ),
     color-beta: (
-        light                       : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta)+20),
+        x-light                     : hsl(hue($color-beta),100,lightness($color-beta)+30),
+        light                       : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta)+30),
         base                        : $color-beta,
         dark                        : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta)-20),
         x-dark                      : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta)-40)
     ),
     color-gamma: (
-        light                       : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)+10),
+        light                       : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)+30),
         base                        : $color-gamma,
         dark                        : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)-20),
         x-dark                      : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)-40)
@@ -132,6 +134,8 @@ $ms13                               : 100 !default;
 // ---
 
 $alpha-font-family                  : 'franklin-gothic-urw', sans-serif !default;
+//$alpha-font-family                  : 'freight-sans-pro', sans-serif !default;
+//$alpha-font-family                  : 'adelle-sans', sans-serif !default;
 $beta-font-family                   : 'clarendon-urw', serif !default;
 
 $alpha-font-size                    : $ms0 !default;
@@ -233,7 +237,7 @@ $html-responsive-font-breakpoint    : bp5 !default;
 $html-responsive-font-magnification : 112.5% !default;
 
 $html-background-color              : palette(color-neutral,xxx-light) !default;
-$body-color                         : palette(color-neutral,dark) !default;
+$body-color                         : rgba(palette(color-neutral,xxx-dark),.75) !default;
 
 $body-font-smoothing                : true !default;
 

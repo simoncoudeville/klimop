@@ -77,7 +77,14 @@
     padding-bottom: 0;
 }
 
-.c-row--timeline {
-    //padding-top: 0;
-    //background-color: palette(color-alpha,dark);
-}
+    .c-row__section--xxl {
+        & + & {
+            @include mq(bp3) {
+                @include padding-top($alpha-leading * 5);
+            }
+
+            @include mq(bp6) {
+                @include padding-top($alpha-leading * 9);
+            }
+        }
+    }
