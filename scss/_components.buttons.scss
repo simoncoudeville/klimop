@@ -147,8 +147,8 @@
 }
 
 .c-button--gamma {
-    background-color: palette(color-gamma);
-    border-color: palette(color-gamma);
+    background-color: palette(color-gamma,dark);
+    border-color: palette(color-gamma,dark);
 
     &,
     &:visited {
@@ -157,13 +157,13 @@
 
     &:hover,
     &:focus {
-        background-color: palette(color-gamma,light);
-        border-color: palette(color-gamma,light);
+        background-color: palette(color-gamma);
+        border-color: palette(color-gamma);
     }
 
     &:active {
-        background-color: palette(color-gamma);
-        border-color: palette(color-gamma);
+        background-color: palette(color-gamma,dark);
+        border-color: palette(color-gamma,dark);
     }
 
 }

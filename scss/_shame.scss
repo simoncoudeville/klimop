@@ -349,12 +349,12 @@ $picture-gutter: 5px;
 
 .c-section--climate-vision {
     //background-color: palette(color-gamma,light);
-    background-image: linear-gradient(to bottom, palette(color-gamma,light) 0,palette(color-alpha,light) 100%);
+    background-image: linear-gradient(to bottom, palette(color-gamma,light),palette(color-alpha,light));
     //background-image: linear-gradient(to bottom, palette(color-gamma,light) 0,palette(color-gamma,dark) 100%);
 }
 
 .c-section--cta {
-    background-color: palette(color-alpha,light);
-    //background-color: palette(color-gamma);
+    //background-color: palette(color-alpha,light);
+    //background-color: palette(color-gamma,dark);
     //background-image: linear-gradient(to bottom, palette(color-alpha,light), palette(color-beta,light));
 }

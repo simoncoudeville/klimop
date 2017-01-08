@@ -8,6 +8,12 @@ var chopstick =
         chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
         chopstick.loadObject(chopstick.blazy, 'chopstick.blazy');
         // chopstick.loadObject(chopstick.parallax, 'chopstick.parallax');
+
+        // $('.js-pictures').stellar({
+        //     horizontalScrolling: false,
+        //     // positionProperty: 'transform',
+        //     hideDistantElements: false
+        // });
     },
 
     function(){

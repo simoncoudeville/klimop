@@ -8,6 +8,12 @@ var chopstick =
         chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
         chopstick.loadObject(chopstick.blazy, 'chopstick.blazy');
         // chopstick.loadObject(chopstick.parallax, 'chopstick.parallax');
+
+        // $('.js-pictures').stellar({
+        //     horizontalScrolling: false,
+        //     // positionProperty: 'transform',
+        //     hideDistantElements: false
+        // });
     },
 
     function(){
@@ -135,20 +141,9 @@ chopstick.parallax =
 
     init: function()
     {
-
-        var items = $('.js-parallax-item'),
-        $window = $(window);
-
-        $window.scroll(function(){
-            var scrollTop = $window.scrollTop();
-            items.each(function(){
-                var $this = $(this),
-                scrollspeed = parseInt($this.data('scroll-speed')),
-                val = - scrollTop / scrollspeed;
-                $this.css('transform', 'translateY(' + val + 'px)');
-            });
+        $.stellar({
+            horizontalScrolling: false
         });
-
     }
 };
 
