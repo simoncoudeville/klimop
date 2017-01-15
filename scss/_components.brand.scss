@@ -11,10 +11,13 @@ $logo-width:    $logo-height * $logo-ratio;
 .c-logo {
     width: $logo-width;
     height: $logo-height;
-    //margin-bottom: 0;
     //display: block;
     //display: inline-flex;
     //align-items: center;
+
+    .c-header & {
+        margin-bottom: 0;
+    }
 }
 
     .c-logo__svg {
@@ -26,7 +29,7 @@ $logo-width:    $logo-height * $logo-ratio;
     }
 
     .c-logo__path {
-        fill: palette(color-neutral,x-dark);
+        fill: palette(color-gamma,x-dark);
 
         .c-logo--neg & {
             fill: palette(color-neutral,xxx-light);
@@ -34,7 +37,7 @@ $logo-width:    $logo-height * $logo-ratio;
     }
 
     .c-logo__dot {
-        fill: palette(color-alpha);
+        fill: palette(color-alpha,dark);
 
         //.c-logo--neg & {
         //    fill: palette(color-neutral,xxx-light);

@@ -17,6 +17,8 @@
 }
 
 .c-row--header {
+    background-color: palette(color-alpha,light);
+    padding-bottom: 0;
     @include padding-lr($columns-gutter,$columns-gutter);
 
     //@include mq(bp3) {
