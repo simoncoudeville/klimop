@@ -4,72 +4,10 @@
     Hacks and quick fixes
 */
 
-body {
-    //&:before {
-    //    content: '';
-    //    display: block;
-    //    position: absolute;
-    //    top: 0;
-    //    right: 0;
-    //    height: 100vh;
-    //    width: 100vw;
-    //    background-color: palette(color-alpha);
-    //}
-}
-
 .o-container {
     position: relative;
     width: 100%;
 }
-
-.c-intro {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    z-index: 20;
-
-    //@include mq(bp3) {
-    //    min-height: calc(70vh - #{$alpha-leading * 5rem});
-    //}
-    //
-    //@include mq(bp4) {
-    //    min-height: calc(80vh - #{$alpha-leading * 5rem});
-    //}
-}
-
-    .c-intro__content {
-        max-width: 42em;
-        margin: 0 auto;
-    }
-
-    .c-intro__title {
-        text-align: center;
-        color: palette(color-alpha,x-dark);
-    }
-
-    .c-intro__more {
-        position: absolute;
-        bottom: $alpha-leading * 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        color: palette(color-neutral,xxx-light);
-        max-width: $grid-max-width ;
-        text-align: center;
-        margin-bottom: 0;
-
-        &:after {
-            display: block;
-            width: 1px;
-            background-color: #fff;
-            height: $alpha-leading * 1.5rem;
-            position: absolute;
-            bottom: $alpha-leading * -1.5rem;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-
-
 
 .s-content {
     h3 {
@@ -82,36 +20,21 @@ body {
 }
 
 .c-section--intro {
-    //background-color: palette(color-alpha,light);
     background-image: linear-gradient(to bottom, palette(color-alpha,light), palette(color-beta,light));
 }
 
 .c-section--timeline {
-    //background-color: palette(color-beta,x-light);
-    //background-image: linear-gradient(to bottom, palette(color-beta,light),palette(color-gamma,light));
     background-image: linear-gradient(to bottom, palette(color-beta,light),palette(color-neutral,xxx-light));
 }
 
 .c-section--climate {
-    //background-color: palette(color-gamma,light);
-    //background-image: linear-gradient(to bottom, palette(color-gamma,light),palette(color-neutral,xxx-light));
     background-image: linear-gradient(to bottom, palette(color-neutral,xxx-light),palette(color-gamma,light));
 }
 
 .c-section--vision {
-    //background-color: palette(color-gamma,light);
-    //background-image: linear-gradient(to bottom, palette(color-neutral,xxx-light),palette(color-alpha,light));
     background-image: linear-gradient(to bottom, palette(color-gamma,dark),palette(color-gamma,x-dark));
 }
 
 .c-section--climate-vision {
-    //background-color: palette(color-gamma,light);
     background-image: linear-gradient(to bottom, palette(color-gamma,light),palette(color-alpha,light));
-    //background-image: linear-gradient(to bottom, palette(color-gamma,light) 0,palette(color-gamma,dark) 100%);
-}
-
-.c-section--cta {
-    //background-color: palette(color-alpha,light);
-    //background-color: palette(color-gamma,dark);
-    //background-image: linear-gradient(to bottom, palette(color-alpha,light), palette(color-beta,light));
 }
