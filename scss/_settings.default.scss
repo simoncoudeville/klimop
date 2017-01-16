@@ -46,6 +46,7 @@
 $color-alpha                        : #acdcd4 !default;
 $color-beta                         : #F6AA3D !default;
 $color-gamma                        : #6573bf !default; // 8464be CE4841 6573bf
+$color-delta                        : #f63d3d !default; // 8464be CE4841 6573bf
 
 $color-error                        : #FF4136 !default;
 $color-success                      : #2ECC40 !default;
@@ -77,7 +78,7 @@ $palettes: (
         x-light                     : hsl(hue($color-beta),100,lightness($color-beta)+30),
         light                       : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta)+30),
         base                        : $color-beta,
-        dark                        : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta)-20),
+        dark                        : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta)-5),
         x-dark                      : hsl(hue($color-beta),saturation($color-beta),lightness($color-beta)-40)
     ),
     color-gamma: (
@@ -85,6 +86,13 @@ $palettes: (
         base                        : $color-gamma,
         dark                        : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)-20),
         x-dark                      : hsl(hue($color-gamma),saturation($color-gamma),lightness($color-gamma)-40)
+    ),
+    color-delta: (
+        x-light                     : hsl(hue($color-delta),100,lightness($color-delta)+35),
+        light                       : hsl(hue($color-delta),saturation($color-delta),lightness($color-delta)+30),
+        base                        : $color-delta,
+        dark                        : hsl(hue($color-delta),saturation($color-delta),lightness($color-delta)-20),
+        x-dark                      : hsl(hue($color-delta),saturation($color-delta),lightness($color-delta)-40)
     ),
     color-error: (
         light                       : hsl(hue($color-error),70,60),
@@ -137,6 +145,7 @@ $alpha-font-family                  : 'franklin-gothic-urw', sans-serif !default
 //$alpha-font-family                  : 'freight-sans-pro', sans-serif !default;
 //$alpha-font-family                  : 'adelle-sans', sans-serif !default;
 $beta-font-family                   : 'clarendon-urw', serif !default;
+//$beta-font-family                   : 'urw-antiqua', serif !default;
 
 $alpha-font-size                    : $ms0 !default;
 
@@ -282,7 +291,7 @@ $h6-margin-bottom                   : $alpha-leading !default;
 $base-font-size                     : $alpha-font-size !default;
 $base-line-height                   : 1 !default;
 $base-margin-bottom                 : $alpha-leading !default;
-$base-indent                        : 2 !default;
+$base-indent                        : 0 !default;
 
 $blockquote-font-style              : italic !default;
 $blockquote-font-size               : $ms1 !default;
@@ -305,7 +314,7 @@ $link-transition                    : none !default;
 $link-decoration                    : none !default;
 $link-decoration--hover             : underline !default;
 
-$link-color                         : palette(color-alpha,dark) !default;
+$link-color                         : palette(color-gamma,dark) !default;
 $link-color--visited                : palette(color-alpha,dark) !default;
 $link-color--hover                  : palette(color-alpha,light) !default;
 $link-color--focus                  : palette(color-alpha,light) !default;

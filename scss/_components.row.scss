@@ -17,13 +17,12 @@
 }
 
 .c-row--header {
-    background-color: palette(color-alpha,light);
     padding-bottom: 0;
     @include padding-lr($columns-gutter,$columns-gutter);
 
-    //@include mq(bp3) {
-    //    @include padding-tb($alpha-leading * 2, $alpha-leading);
-    //}
+    @include mq(bp3) {
+        @include padding-tb($alpha-leading * 2, 0);
+    }
 
     //.o-container {
     //    max-width: none;
@@ -78,6 +77,18 @@
     padding-top: 0;
     padding-bottom: 0;
 }
+
+.c-row--clear-top {
+    padding-top: 0;
+}
+
+    .c-row__section {
+        & + & {
+            @include mq(bp3) {
+                @include padding-top($alpha-leading * 2);
+            }
+        }
+    }
 
     .c-row__section--xxl {
         & + & {

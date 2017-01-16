@@ -122,3 +122,19 @@ $picture-gutter: 5px;
         }
     }
 }
+
+.c-pictures--last {
+    justify-content: center;
+
+    .c-picture:nth-child(1) {
+        z-index: 50;
+        transform: rotate(-1deg);
+        max-width: 90%;
+        //margin-top: -20px;
+
+        @include mq(bp4) {
+            max-width: 60%;
+            //margin-top: -200px;
+        }
+    }
+}

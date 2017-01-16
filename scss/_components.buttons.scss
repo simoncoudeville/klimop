@@ -86,6 +86,10 @@
     border-radius: 10rem;
 }
 
+.c-button--shadow {
+    box-shadow: 0 5px 15px rgba(palette(color-neutral,xxx-dark),.125);
+}
+
 // Button sizes
 
 .c-button--sm {
@@ -99,8 +103,8 @@
 }
 
 .c-button--lg {
-    @include padding-lr(1.25,1.25);
-    @include input-dimensions($alpha-font-size,1,0,1,1);
+    @include padding-lr(2,2);
+    @include input-dimensions($alpha-font-size,1,0,.95,1.05);
 }
 
 // Button colors
@@ -127,22 +131,24 @@
 }
 
 .c-button--beta {
-    background-color: palette(color-beta);
-    border-color: palette(color-beta);
+    background-color: palette(color-beta,dark);
+    border-color: palette(color-beta,dark);
 
     &,
     &:visited {
-        color: palette(color-neutral,x-light);
+        color: palette(color-neutral,xxx-light);
     }
 
     &:hover,
     &:focus {
-        background-color: palette(color-beta,light);
-        color: palette(color-neutral,x-light);
+        background-color: palette(color-beta);
+        border-color: palette(color-beta);
+        color: palette(color-neutral,xxx-light);
     }
 
     &:active {
-        background-color: palette(color-beta);
+        background-color: palette(color-beta,dark);
+        border-color: palette(color-beta,dark);
     }
 }
 

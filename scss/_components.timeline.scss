@@ -75,8 +75,10 @@
         align-items: center;
         align-self: flex-start;
         position: relative;
-        color: rgba(palette(color-neutral,xxx-dark),.5);
+        //color: rgba(palette(color-neutral,xxx-dark),.4);
         margin-bottom: 0;
+        font-weight: $gamma-font-weight;
+        //color: palette(color-gamma,dark);
         @include padding-lr($columns-gutter);
         @include text-dimensions($ms-1,1);
 
@@ -89,9 +91,9 @@
             border-radius: 20px;
             border: 3px solid palette(color-neutral,xxx-light);
             background-color: palette(color-gamma);
-            //box-shadow: 0 0 0 1px rgba(palette(color-neutral,xxx-dark),.15), 0 0 6px rgba(palette(color-neutral,xxx-dark),.15);
+            box-shadow: 0 0 0 1px rgba(palette(color-neutral,xxx-dark),.15), 0 0 6px rgba(palette(color-neutral,xxx-dark),.15);
             //box-shadow: 0 0 6px rgba(palette(color-neutral,xxx-dark),.15);
-            box-shadow: 0 0 0 1px rgba(palette(color-neutral,xxx-dark),.1);
+            //box-shadow: 0 0 0 1px rgba(palette(color-neutral,xxx-dark),.1);
             left: -7px;
         }
 
@@ -136,7 +138,9 @@
 
     .c-timeline__info {
         width: 100%;
-        opacity: .5;
+        //opacity: .5;
+        color: rgba(palette(color-neutral,xxx-dark),.4);
+        //@include text-dimensions($ms-1,1);
         @include ms-1;
 
         @include mq(bp4) {
