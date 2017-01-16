@@ -33,6 +33,7 @@
     "blazy": "^1.8.2",
     "chopstick-sass": "^1.0.1",
     "jquery": "^3.1.0",
+    "jquery.stellar": "^0.6.2",
     "svgxuse": "^1.1.22"
   }
 }
