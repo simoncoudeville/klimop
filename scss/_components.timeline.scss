@@ -121,17 +121,21 @@
 
     .c-timeline__aside {
         display: flex;
-        align-items: flex-end;
+        //align-items: flex-end;
+        flex-direction: column;
+        justify-content: flex-end;
+        //flex-wrap: wrap;
         @include padding-lr($columns-gutter);
 
         @include mq(bp4) {
             width: 50%;
-            max-width: 20em;
+            //max-width: 20em;
             @include padding-top($alpha-leading * 2);
         }
     }
 
     .c-timeline__info {
+        width: 100%;
         opacity: .5;
         @include ms-1;
 
