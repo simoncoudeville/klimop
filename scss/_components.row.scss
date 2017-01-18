@@ -6,7 +6,7 @@
 
 .c-row {
     position: relative;
-    @include padding-tb($alpha-leading,0);
+    @include padding-tb($alpha-leading * 2, $alpha-leading);
     @include padding-lr($columns-gutter,$columns-gutter);
 
     @include mq(bp3) {
@@ -84,6 +84,8 @@
 
     .c-row__section {
         & + & {
+            //@include padding-top($alpha-leading);
+
             @include mq(bp3) {
                 @include padding-top($alpha-leading * 2);
             }

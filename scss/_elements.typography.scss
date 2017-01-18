@@ -7,7 +7,7 @@
 h1 {
     font-family: $h1-font-family;
     font-weight: $h1-font-weight;
-    @include ms4;
+    @include ms3;
     @include margin-bottom($h1-margin-bottom);
 
     @include mq(bp3) {
