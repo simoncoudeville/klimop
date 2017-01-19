@@ -6,66 +6,127 @@
 
 .c-row {
     position: relative;
-    @include padding-tb($alpha-leading * 2, $alpha-leading);
     @include padding-lr($columns-gutter,$columns-gutter);
 
     @include mq(bp3) {
         @include padding-lr($columns-gutter*4,$columns-gutter*4);
+
+        & + & {
+            @include padding-top($alpha-leading * 2);
+        }
     }
 
-    //margin-left: 15rem;
+    .c-row {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .c-row--header {
     padding-bottom: 0;
+    @include padding-top($alpha-leading * 2);
     @include padding-lr($columns-gutter,$columns-gutter);
 
     @include mq(bp3) {
         @include padding-tb($alpha-leading * 2, 0);
     }
-
-    //.o-container {
-    //    max-width: none;
-    //}
 }
 
-//.c-row--alpha {
-//    background-color: palette(color-neutral,xxx-light);
-//}
-//
-//.c-row--beta {
-//    background-color: palette(color-alpha,dark);
-//    color: palette(color-neutral,xxx-light);
-//}
-//
-//.c-row--gamma {
-//    background-color: palette(color-neutral,xx-dark);
-//    color: palette(color-neutral,xxx-light);
-//}
-
 .c-row--lg {
+    & + & {
+        @include mq(bp3) {
+            @include padding-top($alpha-leading * 3);
+        }
+    }
+}
+
+.c-row--lg-top {
+    @include padding-top($alpha-leading * 2);
+
     @include mq(bp3) {
-        @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
+        @include padding-top($alpha-leading * 3);
+    }
+}
+
+.c-row--lg-bottom {
+    @include padding-bottom($alpha-leading);
+
+    @include mq(bp3) {
+        @include padding-bottom($alpha-leading * 2);
     }
 }
 
 .c-row--xl {
+    & + & {
+        @include mq(bp3) {
+            @include padding-top($alpha-leading * 4);
+        }
+
+        @include mq(bp6) {
+            @include padding-top($alpha-leading * 6);
+        }
+    }
+}
+
+.c-row--xl-bottom {
+    @include padding-bottom($alpha-leading);
+
     @include mq(bp3) {
-        @include padding-tb($alpha-leading * 4,$alpha-leading * 3);
+        @include padding-bottom($alpha-leading * 3);
     }
 
     @include mq(bp6) {
-        @include padding-tb($alpha-leading * 6,$alpha-leading * 5);
+        @include padding-bottom($alpha-leading * 5);
+    }
+}
+
+.c-row--xl-top {
+    @include padding-top($alpha-leading * 2);
+
+    @include mq(bp3) {
+        @include padding-top($alpha-leading * 4);
+    }
+
+    @include mq(bp6) {
+        @include padding-top($alpha-leading * 6);
     }
 }
 
 .c-row--xxl {
+    & + & {
+        @include padding-top($alpha-leading);
+
+        @include mq(bp3) {
+            @include padding-top($alpha-leading * 6);
+        }
+
+        @include mq(bp6) {
+            @include padding-top($alpha-leading * 10);
+        }
+    }
+}
+
+.c-row--xxl-top {
+    @include padding-top($alpha-leading * 2);
+
     @include mq(bp3) {
-        @include padding-tb($alpha-leading * 6,$alpha-leading * 5);
+        @include padding-top($alpha-leading * 6);
     }
 
     @include mq(bp6) {
-        @include padding-tb($alpha-leading * 10,$alpha-leading * 9);
+        @include padding-top($alpha-leading * 10);
+    }
+}
+
+.c-row--xxl-bottom {
+    @include padding-bottom($alpha-leading);
+
+    @include mq(bp3) {
+        @include padding-bottom($alpha-leading * 5);
+    }
+
+    @include mq(bp6) {
+        @include padding-bottom($alpha-leading * 9);
     }
 }
 
