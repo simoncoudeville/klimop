@@ -7,7 +7,16 @@
 .c-header {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    //justify-content: space-between;
     justify-content: center;
     //height: 2.675rem;
 }
+
+    .c-header__tag {
+        margin-bottom: 0;
+        //opacity: .75;
+        color: palette(color-alpha,x-dark);
+        @include ms-1;
+        @include padding-top($alpha-leading * .5);
+    }
