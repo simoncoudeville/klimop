@@ -165,6 +165,7 @@
     &:focus {
         background-color: palette(color-gamma);
         border-color: palette(color-gamma);
+        color: palette(color-neutral,xxx-light);
     }
 
     &:active {
