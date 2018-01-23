@@ -7,25 +7,6 @@ var chopstick =
         chopstick.loadObject(chopstick.hide, 'chopstick.hide');
         chopstick.loadObject(chopstick.toggle, 'chopstick.toggle');
         chopstick.loadObject(chopstick.blazy, 'chopstick.blazy');
-        // chopstick.loadObject(chopstick.parallax, 'chopstick.parallax');
-
-        // $('.js-pictures').stellar({
-        //     horizontalScrolling: false,
-        //     // positionProperty: 'transform',
-        //     hideDistantElements: false
-        // });
-    },
-
-    function(){
-        $(window).on('scroll', function() {
-            var scrollTop = $(this).scrollTop();
-            $('.js-section').each(function() {
-                var topDistance = $(this).offset().top;
-                if ( (topDistance) < scrollTop ) {
-                    $('js-nav ul li a').css('color',$(this).attr('data-color'));
-                }
-            });
-        });
     },
 
     /**
@@ -65,16 +46,7 @@ chopstick.blazy =
 
         var bLazy = new Blazy({
             selector: ".js-blazy",
-            successClass: "is-loaded",
-            breakpoints: [{
-                width: 320, // max-width
-                src: 'data-src-small'
-            },
-            {
-                width: 768, // max-width
-                src: 'data-src-medium'
-            }]
-
+            successClass: "is-loaded"
         });
 
     }
