@@ -10,9 +10,9 @@
   "main": "gulpfile.js",
   "devDependencies": {
     "autoprefixer": "6.3.6",
-    "browser-sync": "2.12.8",
+    "browser-sync": "2.29.1",
     "del": "^2.2.1",
-    "gulp": "3.9.1",
+    "gulp": "4.0.2",
     "gulp-cheerio": "^0.6.2",
     "gulp-concat": "2.6.0",
     "gulp-filesize": "0.0.6",
